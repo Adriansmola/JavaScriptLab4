@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotePocket</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="noteForm">
+      <h2>Dodaj nową notatkę</h2>
+      <form id="addNoteForm">
+        <div class="noteProperty">
+          <input
+            type="text"
+            class="noteTitle input"
+            placeholder="Title"
+            required
+          />
+        </div>
+
+        <div class="noteProperty">
+          <textarea
+            class="noteContent"
+            placeholder="Type your note here..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="noteProperty">
+          <label for="noteTags">Tagi (oddzielone przecinkami):</label>
+          <input type="text" class="noteTags input" />
+        </div>
+
+        <div class="noteProperty groupProperty">
+          <div>
+            <label for="noteColor">Color:</label>
+            <input type="color" class="noteColor" value="#ffffff" />
+          </div>
+
+          <button class="btn" type="submit">Dodaj notatkę</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="searchBar">
+      <label for="search">Wyszukaj:</label>
+      <input type="text" id="search" class="input" />
+    </div>
+
+    <div class="notesContainer" id="notesContainer"></div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
